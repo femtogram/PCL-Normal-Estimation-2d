@@ -26,7 +26,7 @@ install(TARGETS pcl_norm_2d
   PUBLIC_HEADER 
   RUNTIME DESTINATION pcl_normals_2d
   LIBRARY DESTINATION pcl_normals_2d
-  ARCHIVE DESTINATION include/pcl_normal_estimation_2d))
+  ARCHIVE DESTINATION include/pcl_normal_estimation_2d)
 
 #PointXYNormal.cpp PointXYNormal.h
 add_executable(norm_2d main.cpp)
