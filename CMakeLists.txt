@@ -23,7 +23,10 @@ INCLUDE_DIRECTORIES( ${Boost_INCLUDE_DIR} include)
 add_library(pcl_norm_2d src/PCA2D.cpp src/Normal2dEstimation.cpp)
 set_target_properties(pcl_norm_2d PROPERTIES PUBLIC_HEADER "include/Normal2dEstimation.h;include/PCA2D.h")
 install(TARGETS pcl_norm_2d
-  PUBLIC_HEADER ARCHIVE DESTINATION include/pcl_normal_estimation_2d)
+  PUBLIC_HEADER 
+  RUNTIME DESTINATION pcl_normals_2d
+  LIBRARY DESTINATION pcl_normals_2d
+  ARCHIVE DESTINATION include/pcl_normal_estimation_2d))
 
 #PointXYNormal.cpp PointXYNormal.h
 add_executable(norm_2d main.cpp)
